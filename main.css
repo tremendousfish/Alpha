@@ -1,0 +1,63 @@
+.container {
+    width: 1400px;  /* 원하는 값을 입력해주세요 */
+    margin: 0 auto;
+  }
+  
+  .album {
+    position: relative;
+    width: 1400px;  /* 원하는 값을 입력해주세요 */
+    height: 900px; /* 원하는 값을 입력해주세요 */
+    overflow: hidden;
+  }
+  
+  .images {
+    position: absolute;
+    display: flex;
+    height: 900px;  /* 원하는 값을 입력해주세요 */
+    transition: transform 0.5s ease-in-out;
+    top: calc(20%); /* 위쪽 공간을 5분의 1로 조절합니다 */
+  }
+  
+  img {
+    width: 1400px;  /* 원하는 값을 입력해주세요 */
+    height: 900px; /* 원하는 값을 입력해주세요 */
+  }
+  
+  .btn {
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  
+  .btn.prev {
+    left: 10px;
+  }
+  
+  .btn.next {
+    right: 10px;
+  }
+  
+  .btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .btn svg path {
+    fill: #000;
+    transition: fill 0.5s ease-in-out;
+  }
+  
+  .btn:hover svg path {
+    fill: #fff;
+  }
+  
+  
+  
+  
+  
+  
+  
