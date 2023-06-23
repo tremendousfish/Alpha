@@ -51,8 +51,3 @@ function init() {
 }
 
 init();
-
-
-
-
-
