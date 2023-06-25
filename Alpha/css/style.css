@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
 .slider {
   width: calc(94%); /* 100% - (3% + 3%) */
   margin-left: 3%;
@@ -71,6 +75,8 @@
   #footer ul li {
     display: inline-block;
     margin-right: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
   }
   
   #footer ul li a {
@@ -124,6 +130,8 @@
   }
   
   a.click1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     position: relative;
     left: 650px;
     top: 320px;
@@ -132,11 +140,28 @@
   }
   
   a.click1:hover {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.85);
     box-shadow: #b28e68 0 0px 0px 40px inset;
   }
   
+  a.click2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    position: relative;
+    left: 650px;
+    top: 320px;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: #23c531 0 0px 0px 2px inset;
+  }
   
+  a.click2:hover {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: #23c531 0 0px 0px 40px inset;
+  }
   
   
   
