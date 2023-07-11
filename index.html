@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/asdf-1.scss">
+  <title>Document</title>
+  <style>
+    .home {
+      float: left;
+    }
+   
+    .word { display : block;
+      margin : auto;
+    }
+  </style>
+</head>
+<body>
+</div>
+<div id="footer">
+  <ul>
+    <div style="text-align : center;">
+      <li class="home"><a href="index.html"><img src="rsc/church_icon1.png" alt="홈" class="left" style="width:150px; height:45px;"><span></span></a></li>
+      <li class="word"><a href="bible.html">성경</a></li>
+      <li class="word"><a href="daily_meditation.html">오늘의 묵상</a></li>
+      <li class="word"><a href="community.html">커뮤니티</a></li>
+      <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
+  </ul>
+</div>
+  <div class="slider">
+    <div class="slide" style="background-image: url(./1.jpg);"></div>
+    <div class="slide" style="background-image: url(./2.jpg);"></div>
+    <div class="slide" style="background-image: url(./3.jpg);"></div>
+    <a class="prev" onclick="button_click(-1)" onmouseenter="showButtons()" onmouseleave="hideButtons()">&#10094;</a>
+    <a class="next" onclick="button_click(1)" onmouseenter="showButtons()" onmouseleave="hideButtons()">&#10095;</a>
+    <div class="wrap">
+  		<a href="daily_meditation.html"  class="click1">클릭하여 이동하기</a>
+	</div>
+    
+    
+  <script>
+    
+    let currSlide = 1;
+    showSlide(currSlide);
+
+    function button_click(num) {
+      clearInterval(slideInterval); // 클릭 시 자동 슬라이드 정지
+      showSlide((currSlide += num));
+    }
+
+    function showSlide(num) {
+      const slides = document.querySelectorAll(".slide");
+      if (num > slides.length) {
+        currSlide = 1;
+      }
+      if (num < 1) {
+        currSlide = slides.length;
+      }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[currSlide - 1].style.display = "block";
+    }
+
+    function showButtons() {
+      const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+      prevButton.style.opacity = 1;
+      nextButton.style.opacity = 1;
+    }
+
+    function hideButtons() {
+      const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+      prevButton.style.opacity = 0;
+      nextButton.style.opacity = 0;
+    }
+
+    // 10초마다 슬라이드 전환
+    const slideInterval = setInterval(() => {
+      showSlide((currSlide += 1));
+    }, 10000);
+
+
+
+    
+  window.onload = function() {
+    const kindWrap =  document.querySelector('.kind_wrap');
+    const slider = kindWrap.querySelector('.slider');
+    const slideLis = slider.querySelectorAll('li')
+    const moveButton = kindWrap.querySelector('.arrow');
+
+    /* 클론 */
+    const clone1 = slideLis[0].cloneNode(true);
+    const cloneLast = slideLis[slideLis.length - 1].cloneNode(true);
+    slider.insertBefore(cloneLast, slideLis[0]);
+    slider.appendChild(clone1);
+
+    /* 주요 변수 초기화 */  
+    let currentIdx = 0;
+    let translate = 0;
+    const speedTime = 500;
+
+    /* CSSOM 셋업 */
+    const sliderCloneLis = slider.querySelectorAll('li');
+    const liWidth = slideLis[0].clientWidth;
+    const sliderWidth = liWidth * sliderCloneLis.length;
+    slider.style.width = `${sliderWidth}px`;
+    currentIdx = 1;
+    translate = -liWidth;
+    slider.style.transform = `translateX(${translate}px)`
+
+    /* 리스너 설치하기 */
+    moveButton.addEventListener('click', moveSlide);
+
+    /* 슬라이드 실행 */
+    function move(D) {
+      currentIdx += (-1 * D);
+      translate += liWidth * D;
+      slider.style.transform = `translateX(${translate}px)`;
+      slider.style.transition = `all ${speedTime}ms ease`
+    }
+
+    /* 클릭 버튼 */
+    function moveSlide(event) {
+      event.preventDefault();
+      if (event.target.className === 'next') {
+        move(-1);
+        if (currentIdx === sliderCloneLis.length -1)
+          setTimeout(() => {
+            slider.style.transition = 'none';
+            currentIdx = 1;
+            translate = -liWidth;
+            slider.style.transform = `translateX(${translate}px)`;
+          }, speedTime);
+      } else {
+          move(1);
+          if (currentIdx === 0) {
+            setTimeout(() => {
+              slider.style.transition = 'none';
+              currentIdx = sliderCloneLis.length -2;
+              translate = -(liWidth * currentIdx);
+              slider.style.transform = `translateX(${translate}px)`;
+            }, speedTime);
+          }
+        }
+    }
+
+  }
+  function showSlide(num) {
+  const slides = document.querySelectorAll(".slide");
+  const clickLink = document.querySelector(".click1");
+
+  if (num > slides.length) {
+    currSlide = 1;
+  }
+  if (num < 1) {
+    currSlide = slides.length;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[currSlide - 1].style.display = "block";
+
+  // Show/hide link based on the current slide
+  if (slides[currSlide - 1].style.backgroundImage.includes("./1.jpg")) {
+    clickLink.style.display = "inline";
+  } else {
+    clickLink.style.display = "none";
+  }
+}
+
+// Rest of the code...
+
+  </script>
+</body>
+</html>
