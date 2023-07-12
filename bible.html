@@ -13,26 +13,6 @@
         <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
       </ul>
     </div>
-    <script>
-      // 메뉴 클릭 시 해당 내용을 보이도록 처리
-      var menuItems = document.querySelectorAll('ul li a');
-
-      menuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-          var targetId = this.getAttribute('href').substring(1);
-          var targetContent = document.getElementById(targetId);
-
-          // 모든 메뉴 항목의 내용을 숨김
-          var contentItems = document.querySelectorAll('#content > div');
-          contentItems.forEach(function(content) {
-            content.style.display = 'none';
-          });
-
-          // 선택한 메뉴 항목의 내용을 보임
-          targetContent.style.display = 'block';
-        });
-      });
-    </script>
 </head>
 <body>
   <div id="footer1">
@@ -81,5 +61,25 @@
       <h2>예언서</h2>
       <p>예언서에 해당하는 내용입니다.</p>
     </div>
+    <script>
+      // 메뉴 클릭 시 해당 내용을 보이도록 처리
+      var menuItems = document.querySelectorAll('ul li a');
+
+      menuItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+          var targetId = this.getAttribute('href').substring(1);
+          var targetContent = document.getElementById(targetId);
+
+          // 모든 메뉴 항목의 내용을 숨김
+          var contentItems = document.querySelectorAll('#content > div');
+          contentItems.forEach(function(content) {
+            content.style.display = 'none';
+          });
+
+          // 선택한 메뉴 항목의 내용을 보임
+          targetContent.style.display = 'block';
+        });
+      });
+    </script>
 </body>
 </html>
