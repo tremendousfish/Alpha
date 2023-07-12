@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bible_page_style.css">
+</head>
+<body>
     <div id="footer">
       <ul>
         <li class="home"><a href="index.html"><img src="rsc/church_icon1.png" alt="홈" class="left" style="width:150px; height:45px;"><span></span></a></li>
@@ -13,53 +15,36 @@
         <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
       </ul>
     </div>
-</head>
-<body>
-  <div id="footer1">
-    <ul>
-      <li><a class="active" href="#home">전체</a></li>
-      <li><a href="#old-testament">구약 성서</a></li>
-          <ul class="sub-menu">
-          <li><a href="#genesis">창세기</a></li>
-        <li><a href="#leviticus">레위기</a></li>
-        <!-- 추가적인 신약 성경 책들을 여기에 추가하면 됩니다 -->
-       </ul>
-      <li><a href="#new-testament">신약 성서</a>
-        <ul class="sub-menu">
-          <li><a href="#genesis">창세기</a></li>
-          <li><a href="#leviticus">레위기</a></li>
-          <!-- 추가적인 신약 성경 책들을 여기에 추가하면 됩니다 -->
-        </ul>
-      </li>
-      <li><a href="#gospels">복음서</a></li>
-      <li><a href="#epistles">사도 서신</a></li>
-      <li><a href="#prophecy">예언서</a></li>
-    </ul>
-  </div>
-    <!-- 메뉴 항목에 해당하는 내용을 추가하세요 -->
+    <div id="footer1">
+      <ul>
+        <li><a class="active" href="#home">전체</a></li>
+        <li><a href="#old-testament">구약 성서</a></li>
+        <li><a href="#new-testament">신약 성서</a></li>
+        <li><a href="#gospels">복음서</a></li>
+        <li><a href="#epistles">사도 서신</a></li>
+        <li><a href="#prophecy">예언서</a></li>
+      </ul>
+    </div>
     <div id="content">
       <h2>전체</h2>
       <p>성경의 전체 내용입니다.</p>
-    </div>
-    <div id="old-testament" style="display: none;">
-      <h2>구약 성서</h2>
-      <p>구약 성서에 해당하는 내용입니다.</p>
-    </div>
-    <div id="new-testament" style="display: none;">
-      <h2>신약 성서</h2>
-      <p>신약 성서에 해당하는 내용입니다.</p>
-    </div>
-    <div id="gospels" style="display: none;">
-      <h2>복음서</h2>
-      <p>복음서에 해당하는 내용입니다.</p>
-    </div>
-    <div id="epistles" style="display: none;">
-      <h2>사도 서신</h2>
-      <p>사도 서신에 해당하는 내용입니다.</p>
-    </div>
-    <div id="prophecy" style="display: none;">
-      <h2>예언서</h2>
-      <p>예언서에 해당하는 내용입니다.</p>
+      <select id="book">
+        <option value="genesis">Genesis</option>
+        <option value="exodus">Exodus</option>
+        <!-- ... -->
+      </select>
+      <select id="chapter">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- ... -->
+      </select>
+      <select id="verse">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <!-- ... -->
+      </select>
+      <button onclick="getVerse()">Get Verse</button>
+      <p id="bibleVerse"></p>
     </div>
     <script>
       // 메뉴 클릭 시 해당 내용을 보이도록 처리
@@ -80,6 +65,19 @@
           targetContent.style.display = 'block';
         });
       });
+
+      function getVerse() {
+        var book = document.getElementById('book').value;
+        var chapter = document.getElementById('chapter').value;
+        var verse = document.getElementById('verse').value;
+
+        fetch(`https://api.bibleapi.co/api/verses/${book}/${chapter}/${verse}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('bibleVerse').innerText = data.text;
+            })
+            .catch(error => console.error('Error:', error));
+      }
     </script>
 </body>
 </html>
