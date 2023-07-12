@@ -40,7 +40,7 @@
 }
 
 /* 하위 메뉴 스타일 */
-.sub-menu {
+#footer1 .sub-menu {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -49,11 +49,11 @@
   z-index: 1;
 }
 
-li:hover .sub-menu {
+#footer1 li:hover .sub-menu {
   display: block;
 }
 
-.sub-menu a {
+#footer1 .sub-menu a {
   color: #000;
   padding: 12px 16px;
   text-decoration: none;
@@ -61,6 +61,6 @@ li:hover .sub-menu {
   text-align: left;
 }
 
-.sub-menu a:hover {
+#footer1 .sub-menu a:hover {
   background-color: #ddd;
 }
