@@ -1,0 +1,66 @@
+
+.home {
+  float: left;
+}
+
+.word { display : block;
+  margin : auto;
+}
+
+/* 메뉴 스타일 */
+#footer1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+#footer1 li {
+  float: left;
+}
+
+#footer1 li a {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 활성 메뉴 스타일 */
+#footer1 li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* 호버 스타일 */
+#footer1 li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* 하위 메뉴 스타일 */
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.sub-menu a:hover {
+  background-color: #ddd;
+}
