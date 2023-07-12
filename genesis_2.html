@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bible_select_bar.css">
+    <style>
+        .home {
+          float: left;
+        }
+       
+        .word { display : block;
+          margin : auto;
+        }
+
+        p {
+          padding-left: 70px;
+        }
+
+        .p-container {
+          margin-top: 60px; /* 상단 여백 추가 */
+          margin-bottom: 60px; /* 하단 여백 추가 */
+        }
+      </style>
+</head>
+<body>
+    <div id="footer">
+        <ul>
+          <li class="home"><a href="index.html"><img src="rsc/church_icon1.png" alt="홈" class="left" style="width:150px; height:45px;"><span></span></a></li>
+          <li><a href="bible.html">성경</a></li>
+          <li><a href="daily_meditation.html">오늘의 묵상</a></li>
+          <li><a href="community.html">커뮤니티</a></li>
+          <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
+        </ul>
+    </div>
+
+    <!-- 새로운 메뉴바 -->
+    <div class="new-menu-bar">
+      <select id="genesis-chapters" onchange="location = this.value;">
+        <script>
+          const currentPage = window.location.href.split('/').pop().split('.')[0].split('_')[1];
+          for (let i = 1; i <= 50; i++) {
+            if (i == currentPage) {
+              document.write(`<option value="genesis_${i}.html" selected>창세기 ${i}장</option>`);
+            } else {
+              document.write(`<option value="genesis_${i}.html">창세기 ${i}장</option>`);
+            }
+          }
+        </script>
+      </select>
+    </div>
+
+
+    <div class="p-container">
+      <p id="gae_gen_2_1" dataVer="gae" dataVol="gen" dataChap="2" dataSec="1"><span class="txt"><span class="num">1</span>천지와 만물이 다 이루어지니라</span></p>
+              
+      <p id="gae_gen_2_2" dataVer="gae" dataVol="gen" dataChap="2" dataSec="2"><span class="txt"><span class="num">2</span>하나님이 그가 하시던 일을 일곱째 날에 마치시니 그가 하시던 모든 일을 그치고 일곱째 날에 안식하시니라</span></p>
+      
+      <p id="gae_gen_2_3" dataVer="gae" dataVol="gen" dataChap="2" dataSec="3"><span class="txt"><span class="num">3</span>하나님이 그 일곱째 날을 <span class=clsDicView dicIdx='5846' style='color:red;'>복</span>되게 하사 <span class=clsDicView dicIdx='2556' style='color:red;'>거룩</span>하게 하셨으니 이는 하나님이 그 <span class=clsDicView dicIdx='768' style='color:red;'>창조</span>하시며 만드시던 모든 일을 마치시고 그 날에 안식하셨음이니라</span></p>
+      
+      <p id="gae_gen_2_4" dataVer="gae" dataVol="gen" dataChap="2" dataSec="4"><span class="txt"><span class="num">4</span>이것이 천지가 <span class=clsDicView dicIdx='768' style='color:red;'>창조</span>될 때에 <span class=clsDicView dicIdx='1030' style='color:red;'>하늘</span>과 땅의 <span class=clsDicView dicIdx='3223' style='color:red;'>내력</span>이니 여호와 하나님이 땅과 <span class=clsDicView dicIdx='1030' style='color:red;'>하늘</span>을 만드시던 날에</span></p>
+      
+      <p id="gae_gen_2_5" dataVer="gae" dataVol="gen" dataChap="2" dataSec="5"><span class="txt"><span class="num">5</span>여호와 하나님이 땅에 비를 내리지 아니하셨고 땅을 갈 사람도 없었으므로 들에는 초목이 아직 없었고 <span class=clsDicView dicIdx='5389' style='color:red;'>밭</span>에는 <span class=clsDicView dicIdx='845' style='color:red;'>채소</span>가 나지 아니하였으며</span></p>
+      
+      <p id="gae_gen_2_6" dataVer="gae" dataVol="gen" dataChap="2" dataSec="6"><span class="txt"><span class="num">6</span><span class=clsDicView dicIdx='1885' style='color:red;'>안개</span>만 땅에서 올라와 온 지면을 적셨더라</span></p>
+      
+      <p id="gae_gen_2_7" dataVer="gae" dataVol="gen" dataChap="2" dataSec="7"><span class="txt"><span class="num">7</span>여호와 하나님이 땅의 흙으로 사람을 지으시고 생기를 그 코에 불어넣으시니 사람이 생령이 되니라</span></p>
+      
+      <p id="gae_gen_2_8" dataVer="gae" dataVol="gen" dataChap="2" dataSec="8"><span class="txt"><span class="num">8</span>여호와 하나님이 <span class=clsDicView dicIdx='3613' style='color:red;'>동방</span>의 <span class=clsDicView dicIdx='2200' style='color:red;'>에덴</span>에 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span>을 창설하시고 그 지으신 사람을 거기 두시니라</span></p>
+      
+      <p id="gae_gen_2_9" dataVer="gae" dataVol="gen" dataChap="2" dataSec="9"><span class="txt"><span class="num">9</span>여호와 하나님이 그 땅에서 보기에 아름답고 먹기에 좋은 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>가 나게 하시니 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> 가운데에는 <span class=clsDicView dicIdx='775' style='color:red;'>생명</span> <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>와 <span class=clsDicView dicIdx='1399' style='color:red;'>선</span>악을 알게 하는 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>도 있더라</span></p>
+      
+      <p id="gae_gen_2_10" dataVer="gae" dataVol="gen" dataChap="2" dataSec="10"><span class="txt"><span class="num">10</span>강이 <span class=clsDicView dicIdx='2200' style='color:red;'>에덴</span>에서 흘러 나와 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span>을 적시고 거기서부터 갈라져 네 <span class=clsDicView dicIdx='3014' style='color:red;'>근원</span>이 되었으니</span></p>
+      
+      <p id="gae_gen_2_11" dataVer="gae" dataVol="gen" dataChap="2" dataSec="11"><span class="txt"><span class="num">11</span>첫째의 <span class=clsDicView dicIdx='1845' style='color:red;'>이름</span>은 <span class=clsDicView dicIdx='5457' style='color:red;'>비손</span>이라 <span class=clsDicView dicIdx='3031' style='color:red;'>금</span>이 있는 <span class=clsDicView dicIdx='1119' style='color:red;'>하윌라</span> 온 땅을 둘렀으며</span></p>
+      
+      <p id="gae_gen_2_12" dataVer="gae" dataVol="gen" dataChap="2" dataSec="12"><span class="txt"><span class="num">12</span>그 땅의 <span class=clsDicView dicIdx='3031' style='color:red;'>금</span>은 순금이요 그 곳에는 베델리엄과 <span class=clsDicView dicIdx='1325' style='color:red;'>호마노</span>도 있으며</span></p>
+      
+      <p id="gae_gen_2_13" dataVer="gae" dataVol="gen" dataChap="2" dataSec="13"><span class="txt"><span class="num">13</span>둘째 강의 <span class=clsDicView dicIdx='1845' style='color:red;'>이름</span>은 <span class=clsDicView dicIdx='3111' style='color:red;'>기혼</span>이라 <span class=clsDicView dicIdx='2872' style='color:red;'>구스</span> 온 땅을 둘렀고</span></p>
+      
+      <p id="gae_gen_2_14" dataVer="gae" dataVol="gen" dataChap="2" dataSec="14"><span class="txt"><span class="num">14</span>셋째 강의 <span class=clsDicView dicIdx='1845' style='color:red;'>이름</span>은 힛데겔이라 <span class=clsDicView dicIdx='2086' style='color:red;'>앗수르</span> 동쪽으로 흘렀으며 넷째 강은 <span class=clsDicView dicIdx='1742' style='color:red;'>유브라데</span>더라</span></p>
+      
+      <p id="gae_gen_2_15" dataVer="gae" dataVol="gen" dataChap="2" dataSec="15"><span class="txt"><span class="num">15</span>여호와 하나님이 그 사람을 이끌어 <span class=clsDicView dicIdx='2200' style='color:red;'>에덴</span> <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span>에 두어 그것을 경작하며 지키게 하시고</span></p>
+      
+      <p id="gae_gen_2_16" dataVer="gae" dataVol="gen" dataChap="2" dataSec="16"><span class="txt"><span class="num">16</span>여호와 하나님이 그 사람에게 명하여 이르시되 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> 각종 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>는 네가 임의로 먹되</span></p>
+      
+      <p id="gae_gen_2_17" dataVer="gae" dataVol="gen" dataChap="2" dataSec="17"><span class="txt"><span class="num">17</span><span class=clsDicView dicIdx='1399' style='color:red;'>선</span>악을 알게 하는 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>는 먹지 말라 네가 먹는 날에는 반드시 죽으리라 하시니라</span></p>
+      
+      <p id="gae_gen_2_18" dataVer="gae" dataVol="gen" dataChap="2" dataSec="18"><span class="txt"><span class="num">18</span>여호와 하나님이 이르시되 사람이 혼자 사는 것이 좋지 아니하니 내가 그를 위하여 돕는 배필을 지으리라 하시니라</span></p>
+      
+      <p id="gae_gen_2_19" dataVer="gae" dataVol="gen" dataChap="2" dataSec="19"><span class="txt"><span class="num">19</span>여호와 하나님이 흙으로 각종 들짐승과 공중의 각종 새를 지으시고 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 무엇이라고 부르나 보시려고 그것들을 그에게로 이끌어 가시니 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 각 생물을 부르는 것이 곧 그 <span class=clsDicView dicIdx='1845' style='color:red;'>이름</span>이 되었더라</span></p>
+      
+      <p id="gae_gen_2_20" dataVer="gae" dataVol="gen" dataChap="2" dataSec="20"><span class="txt"><span class="num">20</span><span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 모든 <span class=clsDicView dicIdx='2420' style='color:red;'>가축</span>과 공중의 새와 들의 모든 <span class=clsDicView dicIdx='732' style='color:red;'>짐승</span>에게 <span class=clsDicView dicIdx='1845' style='color:red;'>이름</span>을 주니라 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 돕는 배필이 없으므로</span></p>
+      
+      <p id="gae_gen_2_21" dataVer="gae" dataVol="gen" dataChap="2" dataSec="21"><span class="txt"><span class="num">21</span>여호와 하나님이 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>을 깊이 <span class=clsDicView dicIdx='432' style='color:red;'>잠</span>들게 하시니 <span class=clsDicView dicIdx='432' style='color:red;'>잠</span>들매 그가 그 갈빗대 하나를 취하고 살로 대신 채우시고</span></p>
+      
+      <p id="gae_gen_2_22" dataVer="gae" dataVol="gen" dataChap="2" dataSec="22"><span class="txt"><span class="num">22</span>여호와 하나님이 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>에게서 취하신 그 갈빗대로 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>를 만드시고 그를 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>에게로 이끌어 오시니</span></p>
+      
+      <p id="gae_gen_2_23" dataVer="gae" dataVol="gen" dataChap="2" dataSec="23"><span class="txt"><span class="num">23</span><span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 이르되 이는 내 뼈 중의 뼈요 살 중의 살이라 이것을 남자에게서 취하였은즉 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>라 부르리라 하니라</span></p>
+      
+      <p id="gae_gen_2_24" dataVer="gae" dataVol="gen" dataChap="2" dataSec="24"><span class="txt"><span class="num">24</span>이러므로 남자가 부모를 떠나 그의 <span class=clsDicView dicIdx='4606' style='color:red;'>아내</span>와 합하여 둘이 한 <span class=clsDicView dicIdx='4797' style='color:red;'>몸</span>을 이룰지로다</span></p>
+      
+      <p id="gae_gen_2_25" dataVer="gae" dataVol="gen" dataChap="2" dataSec="25"><span class="txt"><span class="num">25</span><span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>과 그의 <span class=clsDicView dicIdx='4606' style='color:red;'>아내</span> 두 사람이 벌거벗었으나 부끄러워하지 아니하니라</span></p>
+    </div>
+</body>
+</html>

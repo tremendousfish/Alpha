@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bible_select_bar.css">
+    <style>
+        .home {
+          float: left;
+        }
+       
+        .word { display : block;
+          margin : auto;
+        }
+        
+        p {
+          padding-left: 70px;
+        }
+
+        .p-container {
+          margin-top: 60px; /* 상단 여백 추가 */
+          margin-bottom: 60px; /* 하단 여백 추가 */
+        }
+      </style>
+</head>
+<body>
+    <div id="footer">
+        <ul>
+          <li class="home"><a href="index.html"><img src="rsc/church_icon1.png" alt="홈" class="left" style="width:150px; height:45px;"><span></span></a></li>
+          <li><a href="bible.html">성경</a></li>
+          <li><a href="daily_meditation.html">오늘의 묵상</a></li>
+          <li><a href="community.html">커뮤니티</a></li>
+          <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
+        </ul>
+    </div>
+
+    <!-- 새로운 메뉴바 -->
+    <div class="new-menu-bar">
+        <select id="genesis-chapters" onchange="location = this.value;">
+          <script>
+            const currentPage = window.location.href.split('/').pop().split('.')[0].split('_')[1];
+            for (let i = 1; i <= 50; i++) {
+              if (i == currentPage) {
+                document.write(`<option value="genesis_${i}.html" selected>창세기 ${i}장</option>`);
+              } else {
+                document.write(`<option value="genesis_${i}.html">창세기 ${i}장</option>`);
+              }
+            }
+          </script>
+        </select>
+      </div>
+
+
+    <div class="p-container">
+        <p id="gae_gen_3_1" dataVer="gae" dataVol="gen" dataChap="3" dataSec="1"><span class="txt"><span class="num">1</span>그런데 <span class=clsDicView dicIdx='5725' style='color:red;'>뱀</span>은 여호와 하나님이 지으신 들짐승 중에 가장 간교하니라 <span class=clsDicView dicIdx='5725' style='color:red;'>뱀</span>이 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>에게 물어 이르되 하나님이 참으로 너희에게 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> 모든 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>를 먹지 말라 하시더냐</span></p>
+              
+        <p id="gae_gen_3_2" dataVer="gae" dataVol="gen" dataChap="3" dataSec="2"><span class="txt"><span class="num">2</span><span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>가 <span class=clsDicView dicIdx='5725' style='color:red;'>뱀</span>에게 말하되 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>를 우리가 먹을 수 있으나</span></p>
+        
+        <p id="gae_gen_3_3" dataVer="gae" dataVol="gen" dataChap="3" dataSec="3"><span class="txt"><span class="num">3</span><span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> 중앙에 있는 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>는 하나님의 말씀에 너희는 먹지도 말고 만지지도 말라 너희가 죽을까 하노라 하셨느니라</span></p>
+        
+        <p id="gae_gen_3_4" dataVer="gae" dataVol="gen" dataChap="3" dataSec="4"><span class="txt"><span class="num">4</span><span class=clsDicView dicIdx='5725' style='color:red;'>뱀</span>이 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>에게 이르되 너희가 결코 죽지 아니하리라</span></p>
+        
+        <p id="gae_gen_3_5" dataVer="gae" dataVol="gen" dataChap="3" dataSec="5"><span class="txt"><span class="num">5</span>너희가 그것을 먹는 날에는 너희 눈이 밝아져 하나님과 같이 되어 <span class=clsDicView dicIdx='1399' style='color:red;'>선</span>악을 알 줄 하나님이 아심이니라</span></p>
+        
+        <p id="gae_gen_3_6" dataVer="gae" dataVol="gen" dataChap="3" dataSec="6"><span class="txt"><span class="num">6</span><span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>가 그 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>를 본즉 먹음직도 하고 보암직도 하고 <span class=clsDicView dicIdx='697' style='color:red;'>지혜</span>롭게 할 만큼 탐스럽기도 한 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>인지라 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>가 그 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>를 따먹고 자기와 함께 있는 <span class=clsDicView dicIdx='3214' style='color:red;'>남편</span>에게도 주매 그도 먹은지라</span></p>
+        
+        <p id="gae_gen_3_7" dataVer="gae" dataVol="gen" dataChap="3" dataSec="7"><span class="txt"><span class="num">7</span>이에 그들의 눈이 밝아져 자기들이 벗은 줄을 알고 <span class=clsDicView dicIdx='4864' style='color:red;'>무화과나무</span> 잎을 엮어 치마로 삼았더라</span></p>
+        
+        <p id="gae_gen_3_8" dataVer="gae" dataVol="gen" dataChap="3" dataSec="8"><span class="txt"><span class="num">8</span>그들이 그 날 <span class=clsDicView dicIdx='5073' style='color:red;'>바람</span>이 불 때 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span>에 거니시는 여호와 하나님의 소리를 듣고 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>과 그의 <span class=clsDicView dicIdx='4606' style='color:red;'>아내</span>가 여호와 하나님의 <span class=clsDicView dicIdx='3222' style='color:red;'>낯</span>을 피하여 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span> 사이에 숨은지라</span></p>
+        
+        <p id="gae_gen_3_9" dataVer="gae" dataVol="gen" dataChap="3" dataSec="9"><span class="txt"><span class="num">9</span>여호와 하나님이 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>을 부르시며 그에게 이르시되 네가 어디 있느냐</span></p>
+        
+        <p id="gae_gen_3_10" dataVer="gae" dataVol="gen" dataChap="3" dataSec="10"><span class="txt"><span class="num">10</span>이르되 내가 <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span>에서 하나님의 소리를 듣고 내가 벗었으므로 두려워하여 숨었나이다</span></p>
+        
+        <p id="gae_gen_3_11" dataVer="gae" dataVol="gen" dataChap="3" dataSec="11"><span class="txt"><span class="num">11</span>이르시되 누가 너의 벗었음을 네게 알렸느냐 내가 네게 먹지 말라 명한 그 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span> <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>를 네가 먹었느냐</span></p>
+        
+        <p id="gae_gen_3_12" dataVer="gae" dataVol="gen" dataChap="3" dataSec="12"><span class="txt"><span class="num">12</span><span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 이르되 하나님이 주셔서 나와 함께 있게 하신 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span> 그가 그 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span> <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>를 내게 주므로 내가 먹었나이다</span></p>
+        
+        <p id="gae_gen_3_13" dataVer="gae" dataVol="gen" dataChap="3" dataSec="13"><span class="txt"><span class="num">13</span>여호와 하나님이 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>에게 이르시되 네가 어찌하여 이렇게 하였느냐 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>가 이르되 <span class=clsDicView dicIdx='5725' style='color:red;'>뱀</span>이 나를 꾀므로 내가 먹었나이다</span></p>
+        
+        <p id="gae_gen_3_14" dataVer="gae" dataVol="gen" dataChap="3" dataSec="14"><span class="txt"><span class="num">14</span>여호와 하나님이 <span class=clsDicView dicIdx='5725' style='color:red;'>뱀</span>에게 이르시되 네가 이렇게 하였으니 네가 모든 <span class=clsDicView dicIdx='2420' style='color:red;'>가축</span>과 들의 모든 <span class=clsDicView dicIdx='732' style='color:red;'>짐승</span>보다 더욱 저주를 받아 <span class=clsDicView dicIdx='5390' style='color:red;'>배</span>로 다니고 살아 있는 동안 흙을 먹을지니라</span></p>
+        
+        <p id="gae_gen_3_15" dataVer="gae" dataVol="gen" dataChap="3" dataSec="15"><span class="txt"><span class="num">15</span>내가 너로 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>와 원수가 되게 하고 네 후손도 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>의 후손과 원수가 되게 하리니 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>의 후손은 네 <span class=clsDicView dicIdx='4692' style='color:red;'>머리</span>를 상하게 할 것이요 너는 그의 발꿈치를 상하게 할 것이니라 하시고</span></p>
+        
+        <p id="gae_gen_3_16" dataVer="gae" dataVol="gen" dataChap="3" dataSec="16"><span class="txt"><span class="num">16</span>또 <span class=clsDicView dicIdx='6178' style='color:red;'>여자</span>에게 이르시되 내가 네게 임신하는 고통을 크게 더하리니 네가 <span class=clsDicView dicIdx='4092' style='color:red;'>수고</span>하고 <span class=clsDicView dicIdx='416' style='color:red;'>자식</span>을 낳을 것이며 너는 <span class=clsDicView dicIdx='3214' style='color:red;'>남편</span>을 원하고 <span class=clsDicView dicIdx='3214' style='color:red;'>남편</span>은 너를 다스릴 것이니라 하시고</span></p>
+        
+        <p id="gae_gen_3_17" dataVer="gae" dataVol="gen" dataChap="3" dataSec="17"><span class="txt"><span class="num">17</span><span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>에게 이르시되 네가 네 <span class=clsDicView dicIdx='4606' style='color:red;'>아내</span>의 말을 듣고 내가 네게 먹지 말라 한 <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>를 먹었은즉 땅은 너로 말미암아 저주를 받고 너는 네 평생에 <span class=clsDicView dicIdx='4092' style='color:red;'>수고</span>하여야 그 <span class=clsDicView dicIdx='4010' style='color:red;'>소산</span>을 먹으리라</span></p>
+        
+        <p id="gae_gen_3_18" dataVer="gae" dataVol="gen" dataChap="3" dataSec="18"><span class="txt"><span class="num">18</span>땅이 네게 <span class=clsDicView dicIdx='2392' style='color:red;'>가시덤불</span>과 <span class=clsDicView dicIdx='2184' style='color:red;'>엉겅퀴</span>를 낼 것이라 네가 먹을 것은 <span class=clsDicView dicIdx='5389' style='color:red;'>밭</span>의 <span class=clsDicView dicIdx='845' style='color:red;'>채소</span>인즉</span></p>
+        
+        <p id="gae_gen_3_19" dataVer="gae" dataVol="gen" dataChap="3" dataSec="19"><span class="txt"><span class="num">19</span>네가 흙으로 돌아갈 때까지 <span class=clsDicView dicIdx='2177' style='color:red;'>얼굴</span>에 땀을 흘려야 먹을 것을 먹으리니 네가 그것에서 취함을 입었음이라 너는 흙이니 흙으로 돌아갈 것이니라 하시니라</span></p>
+        
+        <p id="gae_gen_3_20" dataVer="gae" dataVol="gen" dataChap="3" dataSec="20"><span class="txt"><span class="num">20</span><span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>이 그의 <span class=clsDicView dicIdx='4606' style='color:red;'>아내</span>의 <span class=clsDicView dicIdx='1845' style='color:red;'>이름</span>을 <span class=clsDicView dicIdx='1117' style='color:red;'>하와</span>라 불렀으니 그는 모든 산 자의 <span class=clsDicView dicIdx='2042' style='color:red;'>어머니</span>가 됨이더라</span></p>
+        
+        <p id="gae_gen_3_21" dataVer="gae" dataVol="gen" dataChap="3" dataSec="21"><span class="txt"><span class="num">21</span>여호와 하나님이 <span class=clsDicView dicIdx='5006' style='color:red;'>아담</span>과 그의 <span class=clsDicView dicIdx='4606' style='color:red;'>아내</span>를 위하여 <span class=clsDicView dicIdx='2412' style='color:red;'>가죽</span>옷을 지어 입히시니라</span></p>
+        
+        <p id="gae_gen_3_22" dataVer="gae" dataVol="gen" dataChap="3" dataSec="22"><span class="txt"><span class="num">22</span>여호와 하나님이 이르시되 보라 이 사람이 <span class=clsDicView dicIdx='1399' style='color:red;'>선</span>악을 아는 일에 우리 중 하나 같이 되었으니 그가 그의 손을 들어 <span class=clsDicView dicIdx='775' style='color:red;'>생명</span> <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span> <span class=clsDicView dicIdx='1522' style='color:red;'>열매</span>도 따먹고 <span class=clsDicView dicIdx='1550' style='color:red;'>영생</span>할까 하노라 하시고</span></p>
+        
+        <p id="gae_gen_3_23" dataVer="gae" dataVol="gen" dataChap="3" dataSec="23"><span class="txt"><span class="num">23</span>여호와 하나님이 <span class=clsDicView dicIdx='2200' style='color:red;'>에덴</span> <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span>에서 그를 내보내어 그의 <span class=clsDicView dicIdx='3014' style='color:red;'>근원</span>이 된 땅을 갈게 하시니라</span></p>
+        
+        <p id="gae_gen_3_24" dataVer="gae" dataVol="gen" dataChap="3" dataSec="24"><span class="txt"><span class="num">24</span>이같이 하나님이 그 사람을 쫓아내시고 <span class=clsDicView dicIdx='2200' style='color:red;'>에덴</span> <span class=clsDicView dicIdx='3617' style='color:red;'>동산</span> 동쪽에 그룹들과 두루 도는 불 칼을 두어 <span class=clsDicView dicIdx='775' style='color:red;'>생명</span> <span class=clsDicView dicIdx='3164' style='color:red;'>나무</span>의 길을 지키게 하시니라</span></p> 
+      </div>
+</body>
+</html>

@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bible_page_style.css">
+    <style>
+        #footer1 ul {
+            display: flex;
+            justify-content: space-around;
+        }
+        #footer1 ul li {
+            flex-grow: 1;
+        }
+    </style>
 </head>
 <body>
     <div id="footer">
@@ -11,73 +20,92 @@
         <li class="home"><a href="index.html"><img src="rsc/church_icon1.png" alt="홈" class="left" style="width:150px; height:45px;"><span></span></a></li>
         <li class="active"><a href="bible.html">성경</a>
         <li><a href="daily_meditation.html">오늘의 묵상</a></li>
-        <li><a href="comunity.html">커뮤니티</a></li>
+        <li><a href="community.html">커뮤니티</a></li>
         <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
       </ul>
     </div>
     <div id="footer1">
       <ul>
-        <li><a class="active" href="#home">전체</a></li>
-        <li><a href="#old-testament">구약 성서</a></li>
-        <li><a href="#new-testament">신약 성서</a></li>
-        <li><a href="#gospels">복음서</a></li>
-        <li><a href="#epistles">사도 서신</a></li>
-        <li><a href="#prophecy">예언서</a></li>
+        <li><a href="#old-testament">구약 성경</a>
+            <ul class="sub-menu">
+              <li><a href="genesis_1.html">창세기</a></li>
+              <li><a href="biblebooks/exodus_1.html">출애굽기</a></li>
+              <li><a href="biblebooks/leviticus_1.html">레위기</a></li>
+              <li><a href="biblebooks/numbers_1.html">민수기</a></li>
+              <li><a href="biblebooks/deuteronomy_1.html">신명기</a></li>
+              <li><a href="biblebooks/joshua_1.html">여호수아</a></li>
+              <li><a href="biblebooks/judges_1.html">사사기</a></li>
+              <li><a href="biblebooks/ruth_1.html">룻기</a></li>
+              <li><a href="biblebooks/1_samuel_1.html">사무엘상</a></li>
+              <li><a href="biblebooks/2_samuel_1.html">사무엘하</a></li>
+              <li><a href="biblebooks/1_kings_1.html">열왕기상</a></li>
+              <li><a href="biblebooks/2_kings_1.html">열왕기하</a></li>
+              <li><a href="biblebooks/1_chronicles_1.html">역대상</a></li>
+              <li><a href="biblebooks/2_chronicles_1.html">역대하</a></li>
+              <li><a href="biblebooks/ezra_1.html">에스라</a></li>
+              <li><a href="biblebooks/nehemiah_1.html">느헤미야</a></li>
+              <li><a href="biblebooks/esther_1.html">에스더</a></li>
+              <li><a href="biblebooks/job_1.html">욥기</a></li>
+              <li><a href="biblebooks/psalms_1.html">시편</a></li>
+              <li><a href="biblebooks/proverbs_1.html">잠언</a></li>
+              <li><a href="biblebooks/ecclesiastes_1.html">전도서</a></li>
+              <li><a href="biblebooks/song_of_songs_1.html">아가</a></li>
+              <li><a href="biblebooks/isaiah_1.html">이사야</a></li>
+              <li><a href="biblebooks/jeremiah_1.html">예레미야</a></li>
+              <li><a href="biblebooks/lamentations_1.html">예레미야애가</a></li>
+              <li><a href="biblebooks/ezekiel_1.html">에스겔</a></li>
+              <li><a href="biblebooks/daniel_1.html">다니엘</a></li>
+              <li><a href="biblebooks/hosea_1.html">호세아</a></li>
+              <li><a href="biblebooks/joel_1.html">요엘</a></li>
+              <li><a href="biblebooks/amos_1.html">아모스</a></li>
+              <li><a href="biblebooks/obadiah_1.html">오바댜</a></li>
+              <li><a href="biblebooks/jonah_1.html">요나</a></li>
+              <li><a href="biblebooks/micah_1.html">미가</a></li>
+              <li><a href="biblebooks/nahum_1.html">나훔</a></li>
+              <li><a href="biblebooks/habakkuk_1.html">하박국</a></li>
+              <li><a href="biblebooks/zephaniah_1.html">스바냐</a></li>
+              <li><a href="biblebooks/haggai_1.html">학개</a></li>
+              <li><a href="biblebooks/zechariah_1.html">스가랴</a></li>
+              <li><a href="biblebooks/malachi_1.html">말라기</a></li>
+              
+              </ul>
+        </li>
+        <li><a href="#new-testament">신약 성경</a>
+            <ul class="sub-menu">
+                <li><a href="biblebooks/matthew.html">마태복음</a></li>
+                <li><a href="biblebooks/mark.html">마가복음</a></li>
+                <li><a href="biblebooks/luke.html">누가복음</a></li>
+                <li><a href="biblebooks/john.html">요한복음</a></li>
+                <li><a href="biblebooks/acts.html">사도행전</a></li>
+                <li><a href="biblebooks/romans.html">로마서</a></li>
+                <li><a href="biblebooks/1_corinthians.html">고린도전서</a></li>
+                <li><a href="biblebooks/2_corinthians.html">고린도후서</a></li>
+                <li><a href="biblebooks/galatians.html">갈라디아서</a></li>
+                <li><a href="biblebooks/ephesians.html">에베소서</a></li>
+                <li><a href="biblebooks/philippians.html">빌립보서</a></li>
+                <li><a href="biblebooks/colossians.html">골로새서</a></li>
+                <li><a href="biblebooks/1_thessalonians.html">데살로니가전서</a></li>
+                <li><a href="biblebooks/2_thessalonians.html">데살로니가후서</a></li>
+                <li><a href="biblebooks/1_timothy.html">디모데전서</a></li>
+                <li><a href="biblebooks/2_timothy.html">디모데후서</a></li>
+                <li><a href="biblebooks/titus.html">디도서</a></li>
+                <li><a href="biblebooks/philemon.html">빌레몬서</a></li>
+                <li><a href="biblebooks/hebrews.html">히브리서</a></li>
+                <li><a href="biblebooks/james.html">야고보서</a></li>
+                <li><a href="biblebooks/1_peter.html">베드로전서</a></li>
+                <li><a href="biblebooks/2_peter.html">베드로후서</a></li>
+                <li><a href="biblebooks/1_john.html">요한일서</a></li>
+                <li><a href="biblebooks/2_john.html">요한이서</a></li>
+                <li><a href="biblebooks/3_john.html">요한삼서</a></li>
+                <li><a href="biblebooks/jude.html">유다서</a></li>
+                <li><a href="biblebooks/revelation.html">요한계시록</a></li>
+              </ul>
+        </li>
       </ul>
     </div>
     <div id="content">
-      <h2>전체</h2>
-      <p>성경의 전체 내용입니다.</p>
-      <select id="book">
-        <option value="genesis">Genesis</option>
-        <option value="exodus">Exodus</option>
-        <!-- ... -->
-      </select>
-      <select id="chapter">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <!-- ... -->
-      </select>
-      <select id="verse">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <!-- ... -->
-      </select>
-      <button onclick="getVerse()">Get Verse</button>
-      <p id="bibleVerse"></p>
+      <h2>성경</h2>
+      <p>성경의 내용을 선택하여 읽을 수 있습니다.</p>
     </div>
-    <script>
-      // 메뉴 클릭 시 해당 내용을 보이도록 처리
-      var menuItems = document.querySelectorAll('ul li a');
-
-      menuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-          var targetId = this.getAttribute('href').substring(1);
-          var targetContent = document.getElementById(targetId);
-
-          // 모든 메뉴 항목의 내용을 숨김
-          var contentItems = document.querySelectorAll('#content > div');
-          contentItems.forEach(function(content) {
-            content.style.display = 'none';
-          });
-
-          // 선택한 메뉴 항목의 내용을 보임
-          targetContent.style.display = 'block';
-        });
-      });
-
-      function getVerse() {
-        var book = document.getElementById('book').value;
-        var chapter = document.getElementById('chapter').value;
-        var verse = document.getElementById('verse').value;
-
-        fetch(`https://api.bibleapi.co/api/verses/${book}/${chapter}/${verse}`)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('bibleVerse').innerText = data.text;
-            })
-            .catch(error => console.error('Error:', error));
-      }
-    </script>
 </body>
 </html>

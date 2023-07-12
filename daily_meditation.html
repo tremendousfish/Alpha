@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
     <style>
-      .home {
-        float: left;
+      .slide-container {
+        width: 66.67%;
+        height: 80vh;
+        display: flex;
+        overflow: hidden;
+        margin: auto;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
       }
-     
-      .word { display : block;
-        margin : auto;
+      
+      .slide {
+        min-height: 100%;
+        min-width: 100%;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        position: absolute;
       }
-    </style>
+      
+      .slide.active {
+        opacity: 1;
+        position: relative;
+        transition: opacity 1s;
+      }
+      
+      .button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border: none;
+        font-size: 2em;
+        padding: 10px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      
+      .slide-container:hover .button {
+        opacity: 1;
+      }
+      
+      #prev {
+        left: 10px;
+      }
+      
+      #next {
+        right: 10px;
+      }
+      </style>
 </head>
 <body>
     <div id="footer">
@@ -23,9 +73,59 @@
           <li class="setting"><a href="#"><img src="rsc/settings_icon.png" alt="settings" style="width:40px; height:40px;"></a></li>
         </ul>
     </div>
-    <div class="wrap">
-  		<a href="https://band.us/n/aaa997ka2dE0W" target="_blank" class="click1">클릭하여 이동하기</a>
-	</div>
-      <h1>오늘의 묵상</h1>
+
+    <div class="slide-container" id="slide-container">
+      <div class="slide active">로마서 8:38~39<br>“내가 확신하노니 사망이나 생명이나 천사들이나 권세자들이나 현재 일이나 장래 일이나 능력이나 높음이나 깊음이나 다른 어떤 피조물이라도 우리를 우리 주 그리스도 예수 안에 있는 하나님의 사랑에서 끊을 수 없으리라”</div>
+      <div class="slide">신명기 31:6<br>“너희는 강하고 담대하라 두려워하지 말라 그들 앞에서 떨지 말라 이는 네 하나님 여호와 그가 너와 함께 가시며 결코 너를 떠나지 아니하시며 버리지 아니하실 것임이라 하고”</div>
+      <div class="slide">시편 27:1<br>“여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요 여호와는 내 생명의 능력이시니 내가 누구를 무서워하리요“</div>
+      <button id="prev" class="button">◀</button>
+      <button id="next" class="button">▶</button>
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    
+    function showSlide(n) {
+      slides.forEach((slide, index) => {
+        slide.style.opacity = "0";
+        slide.classList.remove('active');
+        if (index === n) {
+          slide.style.opacity = "1";
+          slide.classList.add('active');
+        }
+      });
+    }
+    
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+    }
+    
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+    
+    // 5초마다 다음 슬라이드로 넘어가는 함수를 호출합니다.
+    setInterval(nextSlide, 8000);
+    
+    // 버튼 클릭 이벤트를 추가합니다.
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+    
+    // 페이지 로드 시 첫 번째 슬라이드를 보여줍니다.
+    window.onload = function() {
+      showSlide(slideIndex);
+    };
+    </script>
+    
+    
+ <div class="wrap">
+  <a href="https://band.us/n/aaa997ka2dE0W" target="_blank" class="click2">밴드로 이동하기</a>
+</div>    
+      
 </body>
 </html>

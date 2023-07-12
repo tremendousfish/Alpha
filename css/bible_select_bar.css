@@ -1,0 +1,29 @@
+
+.home {
+  float: left;
+}
+
+.word { display : block;
+  margin : auto;
+  padding-left: 50px; /* 왼쪽 패딩 추가 */
+}
+
+/* 새로운 메뉴바 스타일 */
+.new-menu-bar {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 셀렉트 박스 스타일 */
+#genesis-chapters {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: rgb(208, 207, 207);
+  outline: none;
+}
